@@ -59,9 +59,9 @@ public class StudentController {
 		List<String> cc = new ArrayList<String>();
 		List<String> bcc = new ArrayList<String>();
 		cc.add("nupoxiwil@vpslists.com");
-		list.add("kuldeep123koli@gmail.com");
-		bcc.add("kuldeepk0041017214@gmail.com");
-		sendEmail.send(list, "kuldeep.kumar@oodlestechnologies.com", "sendgrid email", "sending email using send grid",
+		list.add("xyz@xyz.com");
+		bcc.add("xyz123@xyz.com");
+		sendEmail.send(list, "xyz234@xyz.com", "sendgrid email", "sending email using send grid",
 				cc, bcc, null);
 		return studentRepository.findAll();
 	}
