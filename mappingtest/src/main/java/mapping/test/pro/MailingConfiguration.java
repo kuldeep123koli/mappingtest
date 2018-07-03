@@ -13,14 +13,21 @@ public class MailingConfiguration {
 	
 	@Bean
 	public SendGrid getMail(){
+		System.out.println("active profile : "+env.getActiveProfile());
+		System.out.println("username : "+env.getSendGridAccount());
+		System.out.println("key : "+env.getMailkey());
 		SendGrid mailSender = new SendGrid(env.getSendGridApiKey());
 		//SendGrid mailSender1 = new SendGrid(env.getSendGridAccount(),env.getSendGridPassword());
 		return mailSender;
 	}
 	
-	@Bean 
+	/*@Bean 
 	public IEnvConfig testConfig(){
 		return new TestConfig();
-	}
+	}*/
+	
+	/*@Bean IEnvConfig devConfig(){
+		return new DevConfig();
+	}*/
 	
 }

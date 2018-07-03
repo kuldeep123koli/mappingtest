@@ -2,21 +2,21 @@ package mapping.test.pro;
 
 import org.springframework.beans.factory.annotation.Value;
 
-public class TestConfig implements IEnvConfig{
+public class DevConfig implements IEnvConfig{
 	
-	@Value("${mail.sendgrid.test.apikey}")
+	@Value("${mail.sendgrid.dev.apikey}")
 	String sendgridapikey;
 	
-	@Value("${mail.sendgrid.test.username}")
+	@Value("${mail.sendgrid.dev.username}")
 	String sendgridUsername;
 	
-	@Value("${mail.sendgrid.test.password}")
+	@Value("${mail.sendgrid.dev.password}")
 	String sendgridpassword;
 	
-	@Value("${mappingtest.env.test.profile}")
+	@Value("${mappingtest.env.dev.profile}")
 	String profile;
 	
-	@Value("${spring.mail.test.key}")
+	@Value("${spring.mail.dev.key}")
 	String mailkey;
 	
 	@Override

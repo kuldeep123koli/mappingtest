@@ -12,4 +12,5 @@ import mapping.test.pro.model.Student;
 @Repository
 public interface StudentRepository extends JpaRepository<Student,String>{
 		public List<Student> findAllByMarks(Marks marks);
+		public Student findByRoll(String roll);
 }
