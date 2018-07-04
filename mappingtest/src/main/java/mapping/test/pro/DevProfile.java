@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 @Profile("dev")
 public class DevProfile {
 	@Bean
-	public IEnvConfig getTestConfiguration(){
+	public IEnvConfig getDevConfiguration(){
 		return new DevConfig();
 	}
 }
