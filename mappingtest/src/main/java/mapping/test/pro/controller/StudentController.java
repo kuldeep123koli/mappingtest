@@ -8,6 +8,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.assertj.core.util.Arrays;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +38,8 @@ public class StudentController {
 	StudentRepository studentRepository;
 	@Autowired
 	MarksRepository marksRepository;
+	
+	private static Logger log = LoggerFactory.getLogger(StudentController.class);
 
 	/*
 	 * save user with marks http://localhost:9000/student/save { "id":"1",
@@ -118,9 +122,11 @@ public class StudentController {
 
 	@RequestMapping(value = "/getUserValues", method = RequestMethod.POST)
 	public void getUserValues(@RequestBody UserDTO userDTO) {
+		log.debug("student controller : "+userDTO.getStudent().getName());
 		List<Marks> marks = userDTO.getStudent().getMarks();
 		List<String> maths = marks.stream().filter(p -> p.getMath().contains("9")).map(Marks :: getMath).collect(Collectors.toList());
 		System.out.println("maths : "+maths);
 		
 	}
+	
 }
