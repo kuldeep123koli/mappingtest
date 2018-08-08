@@ -21,10 +21,10 @@ public class MailingConfiguration {
 		return mailSender;
 	}
 	
-	/*@Bean 
+	@Bean 
 	public IEnvConfig testConfig(){
 		return new TestConfig();
-	}*/
+	}
 	
 	/*@Bean IEnvConfig devConfig(){
 		return new DevConfig();

@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableScheduling
 @PropertySource("classpath:mail.properties")
+//@PropertySource("file:/home/kuldeepkumar/Videos/microservices/mail.properties")
 public class MappingtestApplication {
 
 	public static void main(String[] args) {
